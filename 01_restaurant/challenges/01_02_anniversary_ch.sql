@@ -5,3 +5,14 @@
 -- they plan to bring in their party.
 
 -- Hint: SQLite offers the INTEGER and REAL datatypes
+
+CREATE TABLE responses (
+CustomerID INTEGER,
+partySize INTEGER
+);
+
+INSERT INTO responses
+(CustomerID, partySize)
+VALUES (1, 45);
+
+select * from responses;
