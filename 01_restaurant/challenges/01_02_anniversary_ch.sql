@@ -6,13 +6,13 @@
 
 -- Hint: SQLite offers the INTEGER and REAL datatypes
 
-CREATE TABLE responses (
-CustomerID INTEGER,
-partySize INTEGER
+.tables
+
+.schema --indent Customers
+
+CREATE TABLE IF NOT EXISTS Responses (
+CustomerID INT,
+PartySize INT
 );
 
-INSERT INTO responses
-(CustomerID, partySize)
-VALUES (1, 45);
-
-select * from responses;
+.schema --indent Responses

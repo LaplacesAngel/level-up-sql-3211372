@@ -4,3 +4,31 @@
 -- Use the following information:
 -- Sam McAdams (smac@kinetecoinc.com), for 5 people
 -- on August 12, 2022 at 6PM (18:00)
+
+.tables
+
+.schema --indent Reservations
+
+SELECT * FROM Reservations
+WHERE CustomerID = (SELECT CustomerID
+      FROM Customers
+      WHERE Email = 'smac@kinetecoinc.com')
+
+select * from Customers
+where FirstName like 'S%';
+
+INSERT INTO Customers
+(FirstName,	LastName,	Email)
+VALUES ('Sam', 'McAdams', 'smac@kinetecoinc.com');
+
+UPDATE Customers
+
+
+INSERT INTO Reservations
+(CustomerID, Date, PartySize)
+VALUES ( 
+    (SELECT CustomerID
+      FROM Customers
+      WHERE Email = 'smac@kinetecoinc.com'),
+    '2022-08-12 18:00:00',
+    5);
