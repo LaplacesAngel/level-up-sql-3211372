@@ -1,0 +1,17 @@
+create table "city" (
+  "city_name" TEXT
+  "Population" INTEGER,
+  "Climate" TEXT,
+  "Country_id" TEXT,
+  "City_id" TEXT,
+  PRIMARY KEY("City_id")
+)
+
+create table "country" (
+  "country_name" text,
+  "country_id" text,
+  PRIMARY KEY("country_id")
+)
+
+alter table city
+add FOREIGN KEY("country_id") REFERENCES country.country_id
